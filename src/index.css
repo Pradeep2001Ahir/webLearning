@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{font-family:"Nunito",sans-serif;color:#10182a;background:#f7faf6;font-synthesis:none;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:320px;min-height:100vh;background:radial-gradient(circle at 15% 0%,rgba(183,229,31,.12),transparent 28%),linear-gradient(180deg,#fff 0%,#f7faf6 100%)}
+button,a{-webkit-tap-highlight-color:transparent}
+::selection{background:#b7e51f;color:#10182a}
+@layer components{
+ .page-shell{@apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8}
+ .card{@apply rounded-3xl border border-slate-200/80 bg-white shadow-card}
+ .btn-lime{@apply inline-flex items-center justify-center gap-2 rounded-2xl bg-lime-400 px-5 py-3 font-extrabold text-ink-900 shadow-lg shadow-lime-400/20 transition hover:-translate-y-0.5 hover:bg-lime-300}
+ .btn-dark{@apply inline-flex items-center justify-center gap-2 rounded-2xl bg-ink-900 px-5 py-3 font-extrabold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-ink-800}
+ .eyebrow{@apply text-xs font-black uppercase tracking-[.2em] text-lime-600}
+}
+@keyframes pop{0%{opacity:.1;transform:scale(.92)}70%{opacity:1;transform:scale(1.03)}100%{opacity:1;transform:scale(1)}}
+.animate-pop{animation:pop .28s ease-out}
